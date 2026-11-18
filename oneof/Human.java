@@ -17,8 +17,12 @@ public class Human{
         this.def = def;
         this.spd = spd;
     }
+    public Human(String name){
+        // player専用！代替
+        this(name, 100, 20, 5, 50);
+    }
 
-    public void call(){
-
+    public void nanore(){
+        Tools.log(String.format("俺の名前は%sだ！！ 体力は%s/%s、攻撃・防御は%s:%s！ 足の速さは%sだ！！", this.name, this.hp, this.maxhp, this.atk, this.def, this.spd));
     }
 }
